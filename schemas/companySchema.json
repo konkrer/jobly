@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "handle": "ibm",
+      "name": "International Business Machines",
+      "num_employees": 10000,
+      "description": "Big Blue",
+      "logo_url": "https://duckduckgo.com/i/f6542513.png"
+    }
+  ],
+  "required": ["handle", "name"],
+  "properties": {
+    "handle": {
+      "$id": "#/properties/handle",
+      "type": "string",
+      "title": "The handle schema",
+      "description": "Handle, abbreviation, etc.",
+      "default": "",
+      "examples": ["ibm"]
+    },
+    "name": {
+      "$id": "#/properties/name",
+      "type": "string",
+      "title": "The name schema",
+      "description": "Company name.",
+      "default": "",
+      "examples": ["International Business Machines"]
+    },
+    "num_employees": {
+      "$id": "#/properties/num_employees",
+      "type": "integer",
+      "title": "The num_employees schema",
+      "description": "Number of employees of company.",
+      "default": 0,
+      "examples": [10000]
+    },
+    "description": {
+      "$id": "#/properties/description",
+      "type": "string",
+      "title": "The description schema",
+      "description": "A description about the company.",
+      "default": "",
+      "examples": ["Big Blue"]
+    },
+    "logo_url": {
+      "$id": "#/properties/logo_url",
+      "type": "string",
+      "title": "The logo_url schema",
+      "description": "Company logo url.",
+      "default": "",
+      "examples": ["https://duckduckgo.com/i/f6542513.png"]
+    }
+  },
+  "additionalProperties": true
+}
